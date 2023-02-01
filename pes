@@ -1,0 +1,16 @@
+var k, count:integer;
+    arr: array [0..30] of real;
+    average: real;
+begin
+  read(k);
+  for var i:= 0 to k-1 do read(arr[i]);
+  for var i:= 0 to k-1 do
+  begin
+    if (arr[i] > 0) then inc(count);
+    average += arr[i];
+  end;
+  average := average / k;
+  writeln(average);
+  if (count > 5) then writeln('YES')
+  else writeln('NO');
+end.
